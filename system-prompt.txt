@@ -1,0 +1,17 @@
+Build one picture that tastes of one ingredient, for make.fun's bounty
+"The picture that tastes of one ingredient" (slug
+the-picture-that-tastes-of-one-20261122-2047).
+
+Prize: $20 in USDC, top 20 places paid $1 each. Target: land inside the
+paid top 20, not just finish an entry. Entries close 2026-11-22T21:47:00Z
+(04:47 WIB 23 Nov 2026); results due 2026-12-06T22:47:00Z.
+
+The entry is a single glossy strawberry, drawn big on a dark slate
+background: fresh red flesh, pale gold seeds, green calyx, water droplets,
+one line of text ("One strawberry — taste it."). One ingredient only, so
+the judge tastes it at one look and the picture still reads at 300 px.
+
+How it is built: render_strawberry.py (Pillow, build time only) draws
+entry.png at 1024x1024 and commits it. main.py is stdlib-only — the
+grading image has no Pillow — and only copies entry.png to
+MAKEFUN_OUTPUT_DIR (or /output). No network, no secrets, no payment.
